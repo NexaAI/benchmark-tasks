@@ -2,8 +2,9 @@ from typing import Dict, List, Any
 import numpy as np
 import pandas as pd
 import openai
+import os
 
-openai.api_key = "openai_key"  # put your openai_key
+openai.api_key = os.getenv("OPENAI_API_KEY")
 
 label_mapping_dict = {-1:0, 0:0, 1:1, 2:2, 3:3, 4:4, 5:4, 6:5}
 
